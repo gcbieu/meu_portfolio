@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Oliveira | Front-end Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        :root {
+            --bg-pink: #ffccf0; 
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-pink);
+            color: #333;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* LOGO COM EFEITO PISCANTE INFINITO */
+        .neon-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 450px; 
+            aspect-ratio: 1/1;
+        }
+
+        .neon-image {
+            width: 80%;
+            max-width: 350px; 
+            z-index: 5;
+            filter: drop-shadow(0 0 8px #ff00ff)
+                    drop-shadow(0 0 15px #ff00ff)
+                    drop-shadow(0 0 30px #ff00ff)
+                    drop-shadow(0 0 50px #00ffff);
+            animation: flicker-infinite 5s linear infinite,
+                       hum 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes flicker-infinite {
+            0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% { 
+                opacity: 1; 
+                filter: drop-shadow(0 0 8px #ff00ff) drop-shadow(0 0 15px #ff00ff) drop-shadow(0 0 30px #ff00ff) drop-shadow(0 0 50px #00ffff);
+            }
+            20%, 21.999%, 63%, 63.999%, 65%, 69.999% { 
+                opacity: 0.4; 
+                filter: drop-shadow(0 0 2px #ff00ff);
+            }
+        }
+
+        @keyframes hum {
+            0% { transform: scale(1); filter: drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 20px #00ffff); }
+            100% { transform: scale(1.02); filter: drop-shadow(0 0 25px #ff00ff) drop-shadow(0 0 45px #00ffff); }
+        }
+
+        /* ANIMAÇÃO DE ESCRITA NO NOME - ACELERADA E SEM CURSOR */
+        .typing-effect {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .05em;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); 
+            animation: typing 6s ease-out forwards;
+            max-width: fit-content;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* EFEITO DE SURGIMENTO DO SUBTÍTULO */
+        .fade-in-up {
+            animation: fadeInUp 1.2s ease-out 1.2s both;
+        }
+
+        /* ANIMAÇÃO PARA OS ÍCONES SUBIREM PARA A POSIÇÃO */
+        .fade-in-up-icons {
+            animation: fadeInUp 1s ease-out 1.9s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* CARROSSEL ESTILO NETFLIX */
+        .netflix-row {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px 0;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+        .netflix-row::-webkit-scrollbar { display: none; }
+
+        .project-card {
+            min-width: 260px;
+            height: 380px;
+            margin-right: 20px;
+            background-color: #333;
+            border-radius: 20px;
+            position: relative;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        @media (hover: hover) {
+            .project-card:hover { transform: scale(1.05); z-index: 10; }
+        }
+
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.95));
+            opacity: 1; 
+            transition: opacity 0.3s;
+        }
+        
+        @media (min-width: 768px) {
+            .project-overlay { opacity: 0; }
+            .project-card:hover .project-overlay { opacity: 1; }
+        }
+
+        .section-title {
+            font-weight: 800;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        @media (min-width: 768px) {
+            .section-title { font-size: 3rem; }
+        }
+
+        /* ESTILO DO MODAL DE SUCESSO */
+        #success-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MODAL DE MENSAGEM ENVIADA -->
+    <div id="success-modal">
+        <div class="bg-white p-8 rounded-3xl text-center max-w-sm mx-4 shadow-2xl transform transition-all scale-100 border-4 border-fuchsia-500">
+            <div class="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-4xl">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3 class="text-2xl font-black text-gray-800 mb-2 uppercase">Mensagem Enviada!</h3>
+            <p class="text-gray-600 mb-6 font-medium"></p>
+            <button onclick="closeModal()" class="w-full py-4 bg-fuchsia-500 text-white font-bold rounded-2xl hover:bg-fuchsia-600 transition-colors shadow-lg active:scale-95">FECHAR</button>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex flex-col justify-center items-center p-6 text-center">
+        <!-- LOGO PRINCIPAL -->
+        <div class="neon-container mb-6">
+            <img src="file:///C:/Users/gabri/Downloads/PORTFOLIO/LOGO.png" alt="Logo GO" class="neon-image" onerror="this.src='https://via.placeholder.com/350?text=Logo+GO'"/>
+        </div>
+
+        <div class="mt-4 px-4 w-full overflow-hidden">
+            <!-- NOME RESPONSIVO SEM CURSOR -->
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white mb-3 typing-effect">Gabriel Oliveira</h1>
+            <!-- CARGO -->
+            <p class="text-lg sm:text-xl md:text-2xl font-semibold uppercase tracking-[0.2em] text-gray-800 fade-in-up">Front-end Developer</p>
+        </div>
+
+        <!-- REDES SOCIAIS COM ANIMAÇÃO DE SUBIDA -->
+        <div class="flex gap-8 mt-12 text-4xl sm:text-5xl fade-in-up-icons">
+            <a href="https://github.com/gcbieu" target="_blank" class="text-white hover:text-cyan-400 transition-all hover:scale-110 active:scale-90">
+                <i class="fab fa-github"></i>
+            </a>
+            
+            <a href="https://linkedin.com/in/gcbieu" target="_blank" class="text-white hover:text-blue-500 transition-all hover:scale-110 active:scale-90">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+
+        <a href="#sobre" class="mt-16 animate-bounce text-white text-3xl opacity-50 hover:opacity-100 transition-opacity">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="py-16 px-4 sm:px-6 max-w-5xl mx-auto bg-white/40 backdrop-blur-lg rounded-[2.5rem] my-10 shadow-2xl border border-white/20">
+        <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <!-- FOTO DE PERFIL -->
+            <div class="w-56 h-56 sm:w-72 sm:h-72 rounded-3xl overflow-hidden shadow-2xl bg-gray-200 flex-shrink-0 border-4 border-white/80 rotate-2 hover:rotate-0 transition-transform duration-500">
+                <img src="file:///C:/Users/gabri/OneDrive/Imagens/Imagem do WhatsApp de 2025-06-20 à(s) 12.10.jpg" alt="Gabriel Oliveira" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="text-center md:text-left">
+                <h2 class="section-title !text-gray-900 !text-2xl sm:!text-3xl mb-4">SOBRE MIM</h2>
+                <p class="text-lg sm:text-xl leading-relaxed text-gray-800 font-medium">
+                    Olá! Sou o Gabriel Oliveira. Estudante de Analise e Desenvolvimento de Sistemas, apaixonado por Front-end, focado em criar interfaces modernas e interativas que proporcionam a melhor experiência ao usuário.
+                </p>
+                <div class="mt-10">
+                    <h3 class="font-bold mb-6 uppercase text-xs sm:text-sm tracking-[0.3em] text-gray-600">Minhas Stacks</h3>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-8 text-5xl sm:text-6xl">
+                        <i class="fab fa-html5 text-orange-600 hover:scale-110 transition-transform"></i>
+                        <i class="fab fa-css3-alt text-blue-600 hover:scale-110 transition-transform"></i>
+                        <i class="fab fa-js text-yellow-500 hover:scale-110 transition-transform"></i>
+                        <i class="fab fa-react text-cyan-500 hover:scale-110 transition-transform"></i>
+                        <i class="fab fa-git-alt text-red-600 hover:scale-110 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- PROJETOS -->
+    <section id="projetos" class="py-20 px-4 sm:px-6 overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <!-- Título atualizado conforme solicitado -->
+            <h2 class="section-title text-center md:text-left">Meus Projetos</h2>
+            
+            <div class="netflix-row pb-10">
+                
+                <!-- PROJETO 1 -->
+                <a href="#" target="_blank" class="project-card group">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800" alt="Projeto 1" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="project-overlay">
+                        <h3 class="text-white font-black text-xl uppercase italic">Dashboards Pro</h3>
+                        <p class="text-sm text-cyan-400 font-bold uppercase tracking-widest">Next.js • Tailwind</p>
+                    </div>
+                </a>
+
+                <!-- PROJETO 2 -->
+                <a href="#" target="_blank" class="project-card group">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800" alt="Projeto 2" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="project-overlay">
+                        <h3 class="text-white font-black text-xl uppercase italic">E-commerce UI</h3>
+                        <p class="text-sm text-fuchsia-400 font-bold uppercase tracking-widest">React • Styled Components</p>
+                    </div>
+                </a>
+
+                <!-- PROJETO 3 -->
+                <a href="#" target="_blank" class="project-card group">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" alt="Projeto 3" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="project-overlay">
+                        <h3 class="text-white font-black text-xl uppercase italic">App Mobile</h3>
+                        <p class="text-sm text-yellow-400 font-bold uppercase tracking-widest">React Native</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO DE CONTATO -->
+    <footer id="contato" class="py-24 px-4 sm:px-8 bg-gray-900/90 backdrop-blur-xl text-white rounded-t-[3rem] sm:rounded-t-[5rem]">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="section-title">Vamos Conversar?</h2>
+            <p class="mb-12 text-lg sm:text-xl opacity-60">Gostou do meu portfólio? Me envia uma mensagem!</p>
+            
+            <form id="my-form" action="https://formspree.io/f/mdapogno" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-5 text-left">
+                
+                <div class="flex flex-col">
+                    <label class="mb-3 text-xs uppercase tracking-widest opacity-40 ml-2">Nome</label>
+                    <input type="text" name="name" placeholder="Digite seu nome..." required class="p-5 bg-white/5 border border-white/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-fuchsia-500 text-white transition-all placeholder:opacity-20">
+                </div>
+
+                <div class="flex flex-col">
+                    <label class="mb-3 text-xs uppercase tracking-widest opacity-40 ml-2">E-mail</label>
+                    <input type="email" name="email" placeholder="exemplo@email.com" required class="p-5 bg-white/5 border border-white/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-fuchsia-500 text-white transition-all placeholder:opacity-20">
+                </div>
+
+                <div class="flex flex-col md:col-span-2">
+                    <label class="mb-3 text-xs uppercase tracking-widest opacity-40 ml-2">Mensagem</label>
+                    <textarea name="message" placeholder="Me conta a boa..." required class="p-5 bg-white/5 border border-white/10 rounded-2xl h-44 focus:outline-none focus:ring-2 focus:ring-fuchsia-500 text-white transition-all placeholder:opacity-20 resize-none"></textarea>
+                </div>
+
+                <input type="text" name="_gotcha" style="display:none" />
+
+                <button type="submit" id="submit-btn" class="md:col-span-2 py-6 bg-gradient-to-r from-cyan-500 to-fuchsia-600 rounded-3xl font-black text-xl hover:shadow-[0_0_30px_rgba(255,0,255,0.3)] active:scale-95 transition-all flex items-center justify-center gap-3">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>ENVIAR MENSAGEM</span>
+                </button>
+            </form>
+            <p id="status" class="mt-6 text-sm font-bold"></p>
+        </div>
+        
+        <div class="mt-20 pt-10 border-t border-white/5 flex flex-col items-center gap-4">
+            <p class="text-[10px] sm:text-xs opacity-30 uppercase tracking-[0.5em]">© 2026 Gabriel Oliveira • Crafted with Passion</p>
+        </div>
+    </footer>
+
+    <!-- LÓGICA JAVASCRIPT -->
+    <script>
+        const form = document.getElementById("my-form");
+        const modal = document.getElementById("success-modal");
+        const submitBtn = document.getElementById("submit-btn");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const status = document.getElementById("status");
+            const data = new FormData(event.target);
+            
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-50');
+            submitBtn.innerHTML = "<i class='fas fa-circle-notch animate-spin'></i> <span>ENVIANDO...</span>";
+
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    modal.style.display = "flex";
+                    form.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-50');
+                    submitBtn.innerHTML = "<i class='fas fa-paper-plane'></i> <span>ENVIAR MENSAGEM</span>";
+                } else {
+                    response.json().then(data => {
+                        status.innerHTML = "Erro ao enviar. Tenta novamente.";
+                        status.className = "mt-6 text-sm font-bold text-red-500";
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('opacity-50');
+                        submitBtn.innerHTML = "<i class='fas fa-paper-plane'></i> <span>ENVIAR MENSAGEM</span>";
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Problema de conexão.";
+                status.className = "mt-6 text-sm font-bold text-red-500";
+            });
+        }
+
+        form.addEventListener("submit", handleSubmit);
+
+        function closeModal() {
+            modal.style.display = "none";
+            document.getElementById("status").innerHTML = "";
+        }
+    </script>
+
+</body>
+</html>
