@@ -1,10 +1,11 @@
         :root {
             --bg: #030303;
-            /* Slightly darker */
             --fg: #e0e0e0;
             --accent: #ccff00;
             --secondary: #ff00ff;
             --danger: #ff3333;
+            --orange: #ff6a00;
+            --blue: #0066ff;
             --easing: cubic-bezier(0.165, 0.84, 0.44, 1);
             --p: #7ee787;
             --v: #a5d6ff;
@@ -1062,7 +1063,7 @@
             font-family: var(--font-serif);
             font-weight: 300;
             font-style: italic;
-            color: var(--accent);
+            color: var(--blue);
         }
 
         .github-desc {
@@ -1216,7 +1217,7 @@
     font-family: 'Space Grotesk', sans-serif;
     font-style: italic;
     font-weight: 300;
-    color: var(--accent);
+    color: var(--orange);
     text-transform: lowercase;
 }
 
