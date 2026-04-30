@@ -942,10 +942,14 @@
     .project-item {
         align-items: flex-start;
         text-align: left;
-        min-width: 75%;
-        max-width: 75%;
+        width: 82%;
+        margin-right: 16px;
+        flex-shrink: 0;
         height: auto;
         padding: 12px;
+        text-align: left;
+        align-items: flex-start;
+        height: auto;
     }
     .project-name {
         font-size: 18px;
@@ -956,6 +960,8 @@
     }
 
     .project-tech {
+        display: flex;
+        flex-wrap: wrap;
         margin-top: 12px;
         gap: 4px;
     }
