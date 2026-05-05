@@ -45,8 +45,8 @@ function lerp(start, end, factor) {
 }
 
 function animateCursor() {
-    cursorX = lerp(cursorX, mouseX, 0.15);
-    cursorY = lerp(cursorY, mouseY, 0.15);
+    cursorX = lerp(cursorX, mouseX, 1.0);
+    cursorY = lerp(cursorY, mouseY, 1.0);
     cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
     requestAnimationFrame(animateCursor);
 }
@@ -294,40 +294,6 @@ document.addEventListener('mousemove', (e) => {
     nav.style.transform = `translateX(-50%) perspective(1000px) rotateX(${-clamp(rx, -10, 10)}deg) rotateY(${clamp(ry, -10, 10)}deg)`;
 });
 
-// --- SCROLL VELOCITY SKEW ---
-const content = document.getElementById('scroll-content');
-let currentScroll = 0;
-let targetScroll = 0;
-let skew = 0;
-
-// Note: For native scroll skewing, we just monitor scroll speed
-// We aren't hijacking scroll here (keeping it native for UX), just adding effect
-let lastScrollTop = 0;
-
-function scrollLoop() {
-    const scrollTop = window.scrollY;
-    const velocity = scrollTop - lastScrollTop;
-    lastScrollTop = scrollTop;
-
-    // Smooth skew approach
-    // Target skew is based on velocity
-    // We clamp it to avoid too much distortion
-    const maxSkew = 5.0;
-    const speed = Math.min(Math.max(velocity * 0.1, -maxSkew), maxSkew);
-
-    // Lerp current skew to target speed
-    skew = lerp(skew, speed, 0.1);
-
-    // round to avoid blurry pixel issues if needed, but smooth is better for transform
-    if (Math.abs(skew) > 0.01) {
-        content.style.transform = `skewY(${skew}deg)`;
-    } else {
-        content.style.transform = `skewY(0deg)`;
-    }
-
-    requestAnimationFrame(scrollLoop);
-}
-scrollLoop();
 
 // --- HACKER TEXT RE-INIT ---
 const alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
