@@ -1050,18 +1050,31 @@
     .projects-scroll {
         flex-direction: column !important; 
         overflow-x: hidden !important;
-        padding: 5px !important;      /* Ajusta o respiro lateral */
+        padding: 20px !important;      /* Ajusta o respiro lateral */
         align-items: center !important;
         gap: 30px !important;          /* Espaço entre um projeto e outro */
     }
     .project-item {
-        min-width: 100% !important; /* Faz o card ocupar a largura total do pai */
-        max-width: 100% !important;
-        padding: 15px !important;
-    }
+            /* --- LARGURA --- */
+            width: 110vw !important; 
+            min-width: 110% !important; 
+            max-width: 110% !important;
+
+            /* --- ALTURA --- */
+            height: auto !important; 
+            min-height: 570px !important;
+
+            /* --- ESPAÇAMENTO INTERNO --- */
+            padding: 10px !important; 
+            
+            /* Ajustes extras para ficar "certinho" */
+            margin: 0 auto !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
 
     .project-image {
-        height: 200px !important;
+        height: 250px !important;
     }
 
     .project-links {
