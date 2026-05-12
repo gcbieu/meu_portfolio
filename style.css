@@ -1046,52 +1046,35 @@
 .project-link:hover svg {
     transform: translate(3px, -3px);
 }
-
 @media (max-width: 768px) {
-    .project-desc {
-        font-size: 12px;
-        line-height: 1.4;
-        margin-top: 6px;
-    text-align: left;
+    .projects-scroll {
+        flex-direction: column !important; 
+        overflow-x: hidden !important;
+        padding: 5px !important;      /* Ajusta o respiro lateral */
+        align-items: center !important;
+        gap: 30px !important;          /* Espaço entre um projeto e outro */
     }
     .project-item {
-        align-items: flex-start;
-        text-align: left;
-        min-width: 75%;
-        max-width: 75%;
-        height: auto;
-        padding: 12px;
-    }
-    .project-name {
-        font-size: 18px;
-        min-height: 48px;
-        font-weight: 700;
-        margin-top: 12px;
-        text-align: left;
+        min-width: 100% !important; /* Faz o card ocupar a largura total do pai */
+        max-width: 100% !important;
+        padding: 15px !important;
     }
 
-    .project-tech {
-        margin-top: 12px;
-        gap: 4px;
-    }
-
-    .tech-badge {
-        font-size: 9px;
-        padding: 3px 8px;
+    .project-image {
+        height: 200px !important;
     }
 
     .project-links {
-        gap: 16px;
-        margin-top: 16px;
-        flex-wrap: wrap; /* caso aperte */
+        gap: 10px !important; 
+        justify-content: space-between !important;
+        width: 100% !important;
     }
 
     .project-link {
-        font-size: 10px;
-        padding: 6px 12px;
-        gap: 10px;
+        flex: 1;
+        justify-content: center;
+        text-align: center;
     }
-
 }
 /* ── BOTÕES DE SCROLL ─────────────────────── */
 .scroll-btn {
