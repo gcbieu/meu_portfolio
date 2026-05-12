@@ -2,466 +2,520 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@700&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imagens/icon.png" type="image/png">    
-    <title>Portfólio | Gabriel Oliveira</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!--Google Font-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="imagens/icon.png" type="image/png">
+  <title>Portfólio | Gabriel Oliveira</title>
 
 </head>
 
 <body>
-    <!-- LOADER -->
-<div id="loader">
-  <div class="loader-name" id="loader-name">CARREGANDO PORTFÓLIO...</span></div>
-  <div class="loader-bar-wrap"><div class="loader-bar" id="loader-bar"></div></div>
-  <div class="loader-counter" id="loader-counter">000</div>
-</div>
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-name" id="loader-name">CARREGANDO PORTFÓLIO...</span></div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+    <div class="loader-counter" id="loader-counter">000</div>
+  </div>
 
-    <div class="noise"></div>
-    <div id="cursor"></div>
+  <div class="noise"></div>
+  <div id="cursor"></div>
 
-<nav class="brutal-nav">
+  <nav class="brutal-nav">
     <a href="#home" class="nav-logo magnetic" style="text-decoration: none;">DEV.GO</a>
-    
+
     <ul class="nav-menu">
-        <li><a href="#about" class="nav-link magnetic" data-text="SOBRE">SOBRE</a></li>
-        <li><a href="#projects" class="nav-link magnetic" data-text="PROJETOS">PROJETOS</a></li>
-        <li><a href="#contato" class="nav-link magnetic" data-text="CONTATOS">CONTATO</a></li>
+      <li>
+        <a href="#sobre" class="nav-link magnetic" data-text="SOBRE">
+          <i class="fas fa-user"></i> SOBRE
+        </a>
+      </li>
+      <li>
+        <a href="#projetos" class="nav-link magnetic" data-text="PROJETOS">
+          <i class="fas fa-rocket"></i> PROJETOS
+        </a>
+      </li>
+      <li>
+        <a href="#contato" class="nav-link magnetic" data-text="CONTATO">
+          <i class="fas fa-envelope"></i> CONTATO
+        </a>
+      </li>
     </ul>
-            <button class="cta-btn magnetic">
-            <a href="assets/Curriculo_Gabriel_Oliveira_Frontend.pdf" download>
-            <span>Currículo</span>
-            </a>
-        </button>
-    </nav>
+    <button class="cta-btn magnetic">
+      <a href="assets/Curriculo_Gabriel_Oliveira_Frontend.pdf" download>
+        <span>Currículo</span>
+      </a>
+    </button>
+  </nav>
 
-    <div id="scroll-content">
-        <section id="home" class="hero">
-            <div class="hero-title-container">
-                <h1>
-                    <div class="word">GABRIEL OLIVEIRA</div><br>
-                    <div class="word">FRONT-END</div>
-                </h1>
-            </div>
+  <!--HERO-->
+  <div id="scroll-content">
+    <section id="home" class="hero">
+      <div class="hero-title-container">
+        <h1>
+          <div class="word">GABRIEL OLIVEIRA</div><br>
+          <div class="word">FRONT-END</div>
+        </h1>
+      </div>
 
-            <div class="tape-wrapper">
-                <div class="tape-text">
-                   PORTFÓLIO ✦ ADS ✦ FRONT-END ✦ DEVELOPER ✦ SOFTWARE ENGINEER ✦ PORTFÓLIO ✦ FRONT-END ✦ DEVELOPER ✦
-                </div>
-            </div>
-        </section>
-
-        <section class="section-dark section-stars">
-            <div id="star-field"></div>
-
-        <div class="content-wrapper">
-            <div class="code-editor">
-
-                <div class="code-line indent">
-                <code class="typewriter" data-text="/* CONFIG COSMOS */"></code>
-                </div>
-
-                <div class="code-line">
-                    <code class="typewriter" data-text="<span class='selector'>.cosmos</span> <span class='bracket'>{</span>"></code>
-                </div>
-
-                <div class="code-line indent">
-                    <code class="typewriter" data-text="<span class='key'>status:</span> <span class='value'>exploring</span>;"></code>
-                </div>
-
-                <div class="code-line indent">
-                    <code class="typewriter" data-text="<span class='key'>limits:</span> <span class='value'>none</span>;"></code>
-                </div>
-
-                <div class="code-line">
-                    <code class="typewriter" data-text="<span class='bracket'>}</span>"></code>
-                </div>
-                
-            </div>
+      <div class="tape-wrapper">
+        <div class="tape-text">
+          PORTFÓLIO ✦ ADS ✦ FRONT-END ✦ DEVELOPER ✦ SOFTWARE ENGINEER ✦ PORTFÓLIO ✦ FRONT-END ✦ DEVELOPER ✦
         </div>
-        </section>
+      </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-<!-- SOBRE -->
-<section id="about">
-  <div>
-    <div class="section-label reveal">SOBRE MIM</div>
-    <h2 class="about-title reveal">
-      <em>Minhas</em><br>
-      Habilidades
-    </h2>
-    <p class="about-text reveal">
-      Olá, eu sou Gabriel Oliveira. Estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor. Tenho foco em Front-end, criando interfaces modernas, interativas e com forte atenção à experiência do usuário. Busco evoluir para Full Stack, sempre trazendo criatividade e uma visão diferente para cada projeto.
-    </p>
-    
-    <div class="about-stats reveal">
-      <div class="stat-box">
-        <div class="stat-num" data-count="1">0</div>
-        <div class="stat-label">Anos de construção</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" data-count="5">0</div>
-        <div class="stat-label">Projetos Lançados</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" data-count="0">0</div>
-        <div class="stat-label">Clientes Satisfeitos</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num" data-count="20">0</div>
-        <div class="stat-label">Tecnologias</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="about-right reveal">
-    <div class="skills-group">
-      <div class="skills-group-title">Frontend</div>
-      <div class="skills-tags">
-        <div class="skill-tag"><span>HTML</span></div>
-        <div class="skill-tag"><span>CSS</span></div>
-        <div class="skill-tag"><span>JavaScript</span></div>
-        <div class="skill-tag"><span>Bootstrap</span></div>
-        <div class="skill-tag"><span>Tailwind</span></div>
-        <div class="skill-tag"><span>React</span></div>
-        <div class="skill-tag"><span>Vue.js</span></div>
-      </div>
-    </div>
-    <div class="skills-group">
-      <div class="skills-group-title">Backend & Banco de Dados</div>
-      <div class="skills-tags">
-        <div class="skill-tag"><span>Node.js</span></div>
-        <div class="skill-tag"><span>JWT</span></div>
-        <div class="skill-tag"><span>bcrypt</span></div>
-        <div class="skill-tag"><span>MongoDB</span></div>
-      </div>
-    </div>
-    <div class="skills-group">
-      <div class="skills-group-title">Integração e APIs </div>
-      <div class="skills-tags">
-        <div class="skill-tag"><span>Consumo de APIs REST</span></div>
-        <div class="skill-tag"><span>PDF.co</span></div>
-        <div class="skill-tag"><span>ConvertAPI</span></div>
-        <div class="skill-tag"><span>Formspree</span></div>
-        <div class="skill-tag"><span>BaaS (Supabase)</span></div>
-        <div class="skill-tag"><span>HG Brasil</span></div>
-        <div class="skill-tag"><span>ViaCEP</span></div>
-      </div>
-    </div>
-    <div class="skills-group">
-      <div class="skills-group-title">Ferramentas e Design</div>
-      <div class="skills-tags">
-        <div class="skill-tag"><span>Figma</span></div>
-        <div class="skill-tag"><span>Git</span></div>
-        <div class="skill-tag"><span>GitHub</span></div>
-        <div class="skill-tag"><span>Postman</span></div>
-        <div class="skill-tag"><span>VS Code</span></div>
-        <div class="skill-tag"><span>Excel Avançado</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-track" id="marqueeTrack">
-    <!-- items repeated for seamless loop -->
-    <span class="marquee-item">HTML</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">CSS</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">JavaScript</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">React</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">Bootstrap</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">Tailwind</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">Vue.js</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">Node.js</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">MongoDB</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">Git</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">Docker</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">GitHub</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">Figma</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">Vs Code</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">Excel Avançado</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">PDF.co</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">ConvertAPI</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">Formspree</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">BaaS (Supabase)</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">HG Brasil</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">ViaCEP</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">bcrypt</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">JWT</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">Figma</span><span class="marquee-item marquee-sep">✦</span>
-    <span class="marquee-item">Postman</span><span class="marquee-item marquee-sep">✦</span>
-  </div>
+<div class="social-sidebar">
+    <a href="https://github.com/gcbieu" target="_blank" rel="external" class="social-icon github">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/gcbieu/" target="_blank" rel="external" class="social-icon linkedin">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
 </div>
 
-<!-- PROJECTS -->
-<section id="projects">
-        <div class="section-label reveal">PROJETOS & ESTUDOS</div>
+      <div class="scroll-indicator">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span class="scroll-text" data-text="Role para baixo">Role para baixo</span>
+      </div>
+
+    </section>
+
+    <section class="section-dark section-stars">
+      <div id="star-field"></div>
+
+      <div class="content-wrapper">
+        <div class="code-editor">
+
+          <div class="code-line indent">
+            <code class="typewriter" data-text="/* CONFIG COSMOS */"></code>
+          </div>
+
+          <div class="code-line">
+            <code class="typewriter"
+              data-text="<span class='selector'>.cosmos</span> <span class='bracket'>{</span>"></code>
+          </div>
+
+          <div class="code-line indent">
+            <code class="typewriter"
+              data-text="<span class='key'>status:</span> <span class='value'>exploring</span>;"></code>
+          </div>
+
+          <div class="code-line indent">
+            <code class="typewriter"
+              data-text="<span class='key'>limits:</span> <span class='value'>none</span>;"></code>
+          </div>
+
+          <div class="code-line">
+            <code class="typewriter" data-text="<span class='bracket'>}</span>"></code>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- SOBRE -->
+    <section id="about">
+      <div>
+        <div class="section-label reveal">SOBRE MIM</div>
+        <h2 class="about-title reveal">
+          <em>Minhas</em><br>
+          Habilidades
+        </h2>
+        <p class="about-text reveal">
+          Olá, eu sou Gabriel Oliveira. Estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor. Tenho foco
+          em Front-end, criando interfaces modernas, interativas e com forte atenção à experiência do usuário. Busco
+          evoluir para Full Stack, sempre trazendo criatividade e uma visão diferente para cada projeto.
+        </p>
+
+        <div class="about-stats reveal">
+          <div class="stat-box">
+            <div class="stat-num" data-count="1">0</div>
+            <div class="stat-label">Anos de construção</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num" data-count="5">0</div>
+            <div class="stat-label">Projetos Lançados</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num" data-count="0">0</div>
+            <div class="stat-label">Clientes Satisfeitos</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num" data-count="20">0</div>
+            <div class="stat-label">Tecnologias</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right reveal">
+        <div class="skills-group">
+          <div class="skills-group-title">Frontend</div>
+          <div class="skills-tags">
+            <div class="skill-tag"><span>HTML</span></div>
+            <div class="skill-tag"><span>CSS</span></div>
+            <div class="skill-tag"><span>JavaScript</span></div>
+            <div class="skill-tag"><span>Bootstrap</span></div>
+            <div class="skill-tag"><span>Tailwind</span></div>
+            <div class="skill-tag"><span>React</span></div>
+            <div class="skill-tag"><span>Vue.js</span></div>
+          </div>
+        </div>
+        <div class="skills-group">
+          <div class="skills-group-title">Backend & Banco de Dados</div>
+          <div class="skills-tags">
+            <div class="skill-tag"><span>Node.js</span></div>
+            <div class="skill-tag"><span>JWT</span></div>
+            <div class="skill-tag"><span>bcrypt</span></div>
+            <div class="skill-tag"><span>MongoDB</span></div>
+          </div>
+        </div>
+        <div class="skills-group">
+          <div class="skills-group-title">Integração e APIs </div>
+          <div class="skills-tags">
+            <div class="skill-tag"><span>Consumo de APIs REST</span></div>
+            <div class="skill-tag"><span>PDF.co</span></div>
+            <div class="skill-tag"><span>ConvertAPI</span></div>
+            <div class="skill-tag"><span>Formspree</span></div>
+            <div class="skill-tag"><span>BaaS (Supabase)</span></div>
+            <div class="skill-tag"><span>HG Brasil</span></div>
+            <div class="skill-tag"><span>ViaCEP</span></div>
+          </div>
+        </div>
+        <div class="skills-group">
+          <div class="skills-group-title">Ferramentas e Design</div>
+          <div class="skills-tags">
+            <div class="skill-tag"><span>Figma</span></div>
+            <div class="skill-tag"><span>Git</span></div>
+            <div class="skill-tag"><span>GitHub</span></div>
+            <div class="skill-tag"><span>Postman</span></div>
+            <div class="skill-tag"><span>VS Code</span></div>
+            <div class="skill-tag"><span>Excel Avançado</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+      <div class="marquee-track" id="marqueeTrack">
+        <!-- items repeated for seamless loop -->
+        <span class="marquee-item">HTML</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">CSS</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">JavaScript</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">React</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Bootstrap</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Tailwind</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Vue.js</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Node.js</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">MongoDB</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Git</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Docker</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">GitHub</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Figma</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Vs Code</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Excel Avançado</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">PDF.co</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">ConvertAPI</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Formspree</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">BaaS (Supabase)</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">HG Brasil</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">ViaCEP</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">bcrypt</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">JWT</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Figma</span><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Postman</span><span class="marquee-item marquee-sep">✦</span>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-label reveal">PROJETOS & ESTUDOS</div>
       <div class="projects-header">
-    <div class="reveal">
-      <div class="projects-title">Meus<br><span style="font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);"> Projetos</span></div>
-    </div>
-    <div class="projects-count reveal">04 Projetos</div>
-  </div>
-
-  <div class="projects-wrapper">
-  <button class="scroll-btn left">‹</button>
-
-<div id="project-list" class="projects-scroll">    
-
-  <!-- Projeto 1 -->
-  <div class="project-item reveal" data-img="capa_areispro">
-    <img class="project-image" src="imagens/capa_areispro.png" />
-
-    <div class="project-content">
-      <div class="project-name">AREIS PRO</div>
-      <div class="project-desc">
-        Sistema interno para automação de relatórios em PDF, reduzindo o tempo de geração em ~50%.
-      </div>
-    </div>
-
-    <div class="project-tech">
-      <span class="tech-badge">HTML</span>
-      <span class="tech-badge">CSS</span>
-      <span class="tech-badge">JavaScript</span>
-      <span class="tech-badge">Supabase (BaaS)</span>
-      <span class="tech-badge">jsPDF</span>
-      <span class="tech-badge">PDF.js</span>
-      <span class="tech-badge">APIs PDF.co e ConvertAPI</span>
-    </div>
-
-    <div class="project-links">
-      <a href="https://gcbieu.github.io/projeto-areispro/" target="_blank" class="project-link">
-        Deploy
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </a>
-
-      <a href="https://github.com/gcbieu/projeto-areispro" target="_blank" class="project-link">
-        GitHub
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-
-  <!-- Projeto 2 -->
-  <div class="project-item reveal" data-img="capa_vnew">
-    <img class="project-image" src="imagens/capavnew.jpg" />
-
-    <div class="project-content">
-      <div class="project-name">VNEW</div>
-      <div class="project-desc">
-        Marketplace de discos de vinil, apresentando um cata logo interativo focado em UX.
-      </div>
-    </div>
-
-    <div class="project-tech">
-      <span class="tech-badge">HTML</span>
-      <span class="tech-badge">CSS</span>
-      <span class="tech-badge">JavaScript</span>
-    </div>
-
-    <div class="project-links">
-      <a href="https://gcbieu.github.io/VNEW/" target="_blank" class="project-link">
-        Deploy
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </a>
-
-      <a href="https://github.com/gcbieu/VNEW" target="_blank" class="project-link">
-        GitHub
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-
-  <!-- Projeto 3 -->
-  <div class="project-item reveal" data-img="Sistema-Clinica">
-    <img class="project-image" src="imagens/Capa Sistema-Clinica.png" />
-
-    <div class="project-content">
-      <div class="project-name">SISTEMA DE ATENDIMENTO</div>
-      <div class="project-desc">
-        SPA para gestão de clínicas com autenticação JWT e integração de APIs de geolocalização.
-      </div>
-    </div>
-
-    <div class="project-tech">
-      <span class="tech-badge">HTML</span>
-      <span class="tech-badge"> JavaScript</span>
-      <span class="tech-badge">Node.js</span>
-      <span class="tech-badge">Vue</span>
-      <span class="tech-badge">JWT</span>
-      <span class="tech-badge">bcrypt</span>
-      <span class="tech-badge">APIs ViaCEP e HG Brasil</span>
-    </div>
-
-    <div class="project-links">
-      <a href="https://github.com/gcbieu/sistema-clinica" class="project-link">
-        GitHub
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-
-  <!-- Projeto 4 -->
-  <div class="project-item reveal data">
-    <img class="project-image" src="https://picsum.photos/300/200" />
-
-    <div class="project-content">
-      <div class="project-name">InovaWeb</div>
-      <div class="project-desc">
-        Em Construção.
-      </div>
-    </div>
-
-    <div class="project-tech">
-      <span class="tech-badge">HTML</span>
-      <span class="tech-badge">CSS</span>
-    </div>
-
-    <div class="project-links">
-      <a href="https://github.com/gcbieu/VNEW" target="_blank" class="project-link">
-        GitHub
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-
-</div>
-
-  <button class="scroll-btn right">›</button>
-
-</section>
-
-
-<!-- GITHUB SECTION -->
-<section id="github-section">
-  <div class="github-inner">
-    <div class="reveal">
-      <div class="section-label" style="color:rgba(245,240,232,0.4);">Código Aberto</div>
-      <h2 class="github-title">Construindo <br>em <em>Público.</em></h2>
-      <p class="github-desc">Cada commit conta uma história. Todo repositório é uma conversa. Acredito em construir em público e contribuir para o ecossistema que me formou.</p>
-      <a href="https://github.com/gcbieu" target="_blank" class="github-btn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-        View GitHub Profile
-      </a>
-    </div>
-
-    <div class="reveal">
-      <div id="github-stats">
-        <div class="gh-stat">
-          <div class="gh-num" id="ghRepos">—</div>
-          <div class="gh-label">Repositórios</div>
+        <div class="reveal">
+          <div class="projects-title">Meus<br><span
+              style="font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);">
+              Projetos</span></div>
         </div>
-        <div class="gh-stat">
-          <div class="gh-num" id="ghStars">—</div>
-          <div class="gh-label">Stars</div>
-        </div>
-        <div class="gh-stat">
-          <div class="gh-num" id="ghFollowers">—</div>
-          <div class="gh-label">Seguidores</div>
-        </div>
-        <div class="gh-stat">
-          <div class="gh-num">100+</div>
-          <div class="gh-label">Contributions</div>
-        </div>
+        <div class="projects-count reveal">04 Projetos</div>
       </div>
 
-      <div class="contribution-grid" id="contribGrid">
-        <div class="contrib-title">Contribution Activity — 2026</div>
-        <!-- generated by JS -->
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="projects-wrapper">
+        <button class="scroll-btn left">‹</button>
 
-<!-- CONTATO -->
-<section id="contato">
-  <div class="contact-inner">
-    <div>
-      <div class="section-label reveal">Entre em contato</div>
-      <div class="contact-big reveal">
-        Vamos<br>
-        <em>construir</em><br>
-        juntos.
-      </div>
-      <p class="contact-sub reveal">Seja com um projeto em mente, colaborando ou apenas querendo dar um oi — estou sempre disponível para uma boa conversa.</p>
-      <div class="contact-links reveal">
-        <a href="https://github.com/gcbieu" target="_blank" class="contact-link">
-          <div>
-            <div class="contact-link-name">GitHub</div>
-            <div class="contact-link-handle">github.com/gcbieu</div>
+        <div id="project-list" class="projects-scroll">
+
+          <!-- Projeto 1 -->
+          <div class="project-item reveal" data-img="capa_areispro">
+            <img class="project-image" src="imagens/capa_areispro.png" />
+
+            <div class="project-content">
+              <div class="project-name">AREIS PRO</div>
+              <div class="project-desc">
+                Sistema interno para automação de relatórios em PDF, reduzindo o tempo de geração em ~50%.
+              </div>
+            </div>
+
+            <div class="project-tech">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Supabase (BaaS)</span>
+              <span class="tech-badge">jsPDF</span>
+              <span class="tech-badge">PDF.js</span>
+              <span class="tech-badge">APIs PDF.co e ConvertAPI</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://gcbieu.github.io/projeto-areispro/" target="_blank" class="project-link">
+                Deploy
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </a>
+
+              <a href="https://github.com/gcbieu/projeto-areispro" target="_blank" class="project-link">
+                GitHub
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </a>
+            </div>
           </div>
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5"/></svg>
-        </a>
-        <a href="https://linkedin.com/in/gcbieu" target="_blank" class="contact-link">
-          <div>
-            <div class="contact-link-name">LinkedIn</div>
-            <div class="contact-link-handle">linkedin.com/in/gcbieu</div>
+
+          <!-- Projeto 2 -->
+          <div class="project-item reveal" data-img="capa_vnew">
+            <img class="project-image" src="imagens/capavnew.jpg" />
+
+            <div class="project-content">
+              <div class="project-name">VNEW</div>
+              <div class="project-desc">
+                Marketplace de discos de vinil, apresentando um cata logo interativo focado em UX.
+              </div>
+            </div>
+
+            <div class="project-tech">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://gcbieu.github.io/VNEW/" target="_blank" class="project-link">
+                Deploy
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </a>
+
+              <a href="https://github.com/gcbieu/VNEW" target="_blank" class="project-link">
+                GitHub
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </a>
+            </div>
           </div>
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5"/></svg>
-        </a>
-      </div>
-    </div>
 
-    <div class="contact-form-wrap reveal">
-      <div class="section-label">Envie uma Mensagem</div>
-      <form id="my-form" action="https://formspree.io/f/mdapogno" method="POST">
+          <!-- Projeto 3 -->
+          <div class="project-item reveal" data-img="Sistema-Clinica">
+            <img class="project-image" src="imagens/Capa Sistema-Clinica.png" />
 
-        <div class="form-row">
-          <label class="form-label">Seu Nome</label>
-          <input type="text" name="name" class="form-input" placeholder="Digite seu nome..." required/>
+            <div class="project-content">
+              <div class="project-name">SISTEMA DE ATENDIMENTO</div>
+              <div class="project-desc">
+                SPA para gestão de clínicas com autenticação JWT e integração de APIs de geolocalização.
+              </div>
+            </div>
+
+            <div class="project-tech">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge"> JavaScript</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Vue</span>
+              <span class="tech-badge">JWT</span>
+              <span class="tech-badge">bcrypt</span>
+              <span class="tech-badge">APIs ViaCEP e HG Brasil</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/gcbieu/sistema-clinica" class="project-link">
+                GitHub
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Projeto 4 -->
+          <div class="project-item reveal data">
+            <img class="project-image" src="https://picsum.photos/300/200" />
+
+            <div class="project-content">
+              <div class="project-name">InovaWeb</div>
+              <div class="project-desc">
+                Em Construção.
+              </div>
+            </div>
+
+            <div class="project-tech">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/gcbieu/VNEW" target="_blank" class="project-link">
+                GitHub
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M1 13L13 1M13 1H4M13 1V10" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
         </div>
 
-        <div class="form-row">
-          <label class="form-label">Endereço de E-mail</label>
-          <input type="email" name="email" class="form-input" placeholder="exemplo@email.com" required/>
+        <button class="scroll-btn right">›</button>
+
+    </section>
+
+
+    <!-- GITHUB SECTION -->
+    <section id="github-section">
+      <div class="github-inner">
+        <div class="reveal">
+          <div class="section-label" style="color:rgba(245,240,232,0.4);">Código Aberto</div>
+          <h2 class="github-title">Construindo <br>em <em>Público.</em></h2>
+          <p class="github-desc">Cada commit conta uma história. Todo repositório é uma conversa. Acredito em construir
+            em público e contribuir para o ecossistema que me formou.</p>
+          <a href="https://github.com/gcbieu" target="_blank" class="github-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            View GitHub Profile
+          </a>
         </div>
 
-        <div class="form-row">
-          <label class="form-label">Mensagem</label>
-          <textarea name="message" class="form-textarea" placeholder="Digite sua mensagem..." required></textarea>
-        </div>
+        <div class="reveal">
+          <div id="github-stats">
+            <div class="gh-stat">
+              <div class="gh-num" id="ghRepos">—</div>
+              <div class="gh-label">Repositórios</div>
+            </div>
+            <div class="gh-stat">
+              <div class="gh-num" id="ghStars">—</div>
+              <div class="gh-label">Stars</div>
+            </div>
+            <div class="gh-stat">
+              <div class="gh-num" id="ghFollowers">—</div>
+              <div class="gh-label">Seguidores</div>
+            </div>
+            <div class="gh-stat">
+              <div class="gh-num">100+</div>
+              <div class="gh-label">Contributions</div>
+            </div>
+          </div>
 
-        <button type="submit" class="form-submit">
-          <span>Enviar Mensagem →</span>
-        </button>
-
-        <p id="form-status"></p>
-      </form>
+          <div class="contribution-grid" id="contribGrid">
+            <div class="contrib-title">Contribution Activity — 2026</div>
+            <!-- generated by JS -->
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-        <footer
-            style="height: 10vh; background: var(--fg); color: var(--bg); display: flex; align-items: center; justify-content: center; flex-direction: column;">
-         <div class="mt-20 pt-10 border-t border-white/5 flex flex-col items-center gap-4">
-            <p class="text-[10px] sm:text-xs opacity-30 uppercase tracking-[0.5em]">© 2026 Gabriel Oliveira • Crafted
-                with Passion</p>
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="contact-inner">
+        <div>
+          <div class="section-label reveal">Entre em contato</div>
+          <div class="contact-big reveal">
+            Vamos<br>
+            <em>construir</em><br>
+            juntos.
+          </div>
+          <p class="contact-sub reveal">Seja com um projeto em mente, colaborando ou apenas querendo dar um oi — estou
+            sempre disponível para uma boa conversa.</p>
+          <div class="contact-links reveal">
+            <a href="https://github.com/gcbieu" target="_blank" class="contact-link">
+              <div>
+                <div class="contact-link-name">GitHub</div>
+                <div class="contact-link-handle">github.com/gcbieu</div>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/gcbieu" target="_blank" class="contact-link">
+              <div>
+                <div class="contact-link-name">LinkedIn</div>
+                <div class="contact-link-handle">linkedin.com/in/gcbieu</div>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </a>
+          </div>
         </div>
+
+        <div class="contact-form-wrap reveal">
+          <div class="section-label">Envie uma Mensagem</div>
+          <form id="my-form" action="https://formspree.io/f/mdapogno" method="POST">
+
+            <div class="form-row">
+              <label class="form-label">Seu Nome</label>
+              <input type="text" name="name" class="form-input" placeholder="Digite seu nome..." required />
+            </div>
+
+            <div class="form-row">
+              <label class="form-label">Endereço de E-mail</label>
+              <input type="email" name="email" class="form-input" placeholder="exemplo@email.com" required />
+            </div>
+
+            <div class="form-row">
+              <label class="form-label">Mensagem</label>
+              <textarea name="message" class="form-textarea" placeholder="Digite sua mensagem..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+              <span>Enviar Mensagem →</span>
+            </button>
+
+            <p id="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      style="height: 10vh; background: var(--fg); color: var(--bg); display: flex; align-items: center; justify-content: center; flex-direction: column;">
+      <div class="mt-20 pt-10 border-t border-white/5 flex flex-col items-center gap-4">
+        <p class="text-[10px] sm:text-xs opacity-30 uppercase tracking-[0.5em]">© 2026 Gabriel Oliveira • Crafted
+          with Passion</p>
+      </div>
     </footer>
 
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="script.js"></script>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
