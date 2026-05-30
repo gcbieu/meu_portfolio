@@ -1604,34 +1604,9 @@
                 /* 2 colunas no tablet */
             }
 
-            /* Centraliza geral */
-            body,
-            section,
-            div {
-                text-align: center;
-            }
+            /* Centralização global removida para evitar layout esmagado no mobile.
+               Ajustes específicos apenas em #about-section / #about e grids relacionados. */
 
-            /* Flex centralizado */
-            .hero,
-            .content-wrapper,
-            .about-text,
-            .contact-inner {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .about-right,
-            .contact-inner {
-                align-items: center !important;
-            }
-
-            /* Links e botões centralizados */
-            .contact-links,
-            .nav-menu {
-                align-items: center;
-            }
 
             .nav-menu {
                 display: none !important;
