@@ -232,17 +232,21 @@ function resetTyping() {
 }
 
 // ── PROJECT ───────────────────────
-const container = document.querySelector('.projects-scroll');
+// (Opcional) Botões de scroll só funcionam se existirem no HTML
+const projectsContainer = document.querySelector('.projects-scroll');
+const rightBtn = document.querySelector('.scroll-btn.right');
+const leftBtn = document.querySelector('.scroll-btn.left');
 
-document.querySelector('.scroll-btn.right')
-.addEventListener('click', () => {
-    container.scrollBy({ left: 320, behavior: 'smooth' });
-});
+if (projectsContainer && rightBtn && leftBtn) {
+  rightBtn.addEventListener('click', () => {
+    projectsContainer.scrollBy({ left: 320, behavior: 'smooth' });
+  });
 
-document.querySelector('.scroll-btn.left')
-.addEventListener('click', () => {
-    container.scrollBy({ left: -320, behavior: 'smooth' });
-});
+  leftBtn.addEventListener('click', () => {
+    projectsContainer.scrollBy({ left: -320, behavior: 'smooth' });
+  });
+}
+
 
 // --- TEXT SPLITTING ---
 const words = document.querySelectorAll('.hero h1 .word');
