@@ -1173,28 +1173,28 @@ body {
         width: 8px;
         height: 8px;
     }
-
-.contrib-cell.l1 {
-    background: rgba(0, 71, 255, 0.2);
 }
+    .contrib-cell.l1 {
+        background: rgba(0, 71, 255, 0.2);
+    }
 
-.contrib-cell.l2 {
-    background: rgba(0, 71, 255, 0.4);
-}
+    .contrib-cell.l2 {
+        background: rgba(0, 71, 255, 0.4);
+    }
 
-.contrib-cell.l3 {
-    background: rgba(0, 71, 255, 0.65);
-}
+    .contrib-cell.l3 {
+        background: rgba(0, 71, 255, 0.65);
+    }
 
-.contrib-cell.l4 {
-    background: rgba(0, 71, 255, 0.9);
-}
+    .contrib-cell.l4 {
+        background: rgba(0, 71, 255, 0.9);
+    }
 
-/* ── CONTACT ─────────────────────────────────── */
-#contato {
-    padding: 8rem 4rem;
-    background-color: var(--bg);
-}
+    /* ── CONTACT ─────────────────────────────────── */
+    #contato {
+        padding: 8rem 4rem;
+        background-color: var(--bg);
+    }
 
 .contact-inner {
     display: grid;
@@ -1420,23 +1420,7 @@ body {
     .contrib-cell.l4 {
         background: rgba(0, 71, 255, 0.9);
     }
-
-    @media (max-width: 768px) {
-        #github-section {
-            padding: 4rem 1.5rem;
-        }
-
-        .github-inner {
-            grid-template-columns: 1fr;
-            gap: 3rem;
-        }
-
-        .contrib-cell {
-            width: 8px;
-            height: 8px;
-        }
-    }
-
+}
     /* ── CONTACT ─────────────────────────────────── */
     #contact {
         padding: 8rem 4rem;
