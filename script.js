@@ -209,6 +209,8 @@ window.addEventListener("load", () => {
 // --- TEXT SPLITTING ---
 const words = document.querySelectorAll('.hero h1 .word');
 words.forEach(word => {
+    // Manter o título completo para quebra natural de linha em desktop e mobile.
+    if (word.classList.contains('hero-role') || word.classList.contains('hero-name')) return;
     const text = word.innerText;
     word.innerHTML = '';
     text.split('').forEach(char => {
@@ -290,7 +292,8 @@ if (statsSection) {
                     if (el.classList.contains('animating')) return;
                     el.classList.add('animating');
 
-                    const target = parseInt(el.dataset.count);
+                    const target = parseInt(el.dataset.count, 10);
+                    const suffix = el.dataset.count.trim().endsWith('+') ? '+' : ''; 
                     let current = 0;
 
                     function update() {
@@ -299,7 +302,7 @@ if (statsSection) {
                             el.textContent = Math.floor(current);
                             requestAnimationFrame(update);
                         } else {
-                            el.textContent = target + '+';
+                            el.textContent = target + suffix;
                             el.classList.remove('animating');
                         }
                     }

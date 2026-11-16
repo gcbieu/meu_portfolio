@@ -1,466 +1,645 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@700&display=swap"
-    rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="imagens/icon.png" type="image/png" />
+    <title>Portfólio | Gabriel Oliveira</title>
+  </head>
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="imagens/icon.png" type="image/png">
-  <title>Portfólio | Gabriel Oliveira</title>
-</head>
-
-<body>
-  <!-- PAGINA DE CARREGAMENTO -->
-  <div id="loader">
-    <div class="loader-name" id="loader-name">CARREGANDO PORTFÓLIO...</div>
-    <div class="loader-bar-wrap">
-      <div class="loader-bar" id="loader-bar"></div>
-    </div>
-    <div class="loader-counter" id="loader-counter">000</div>
-  </div>
-
-  <div class="noise"></div>
-  <div id="cursor"></div>
-
-  <!-- MENU NAVEGAÇÃO -->
-  <nav class="brutal-nav">
-    <a href="#home" class="nav-logo magnetic">DEV.GO</a>
-
-    <ul class="nav-menu">
-      <li><a href="#about-section" class="nav-link magnetic" data-text="SOBRE">SOBRE</a></li>
-      <li><a href="#projetos" class="nav-link magnetic" data-text="PROJETOS">PROJETOS</a></li>
-      <li><a href="#contato" class="nav-link magnetic" data-text="CONTATO">CONTATO</a></li>
-    </ul>
-    <button class="cta-btn magnetic">
-      <a href="assets/Curriculo_Gabriel_Oliveira_Frontend.pdf" download>
-        <span>Currículo</span>
-      </a>
-    </button>
-  </nav>
-
-  <div id="scroll-content">
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="hero-title-container">
-        <h1>
-          <div class="word">GABRIEL OLIVEIRA</div><br>
-          <div class="word">FRONT-END</div>
-        </h1>
+  <body>
+    <!-- PAGINA DE CARREGAMENTO -->
+    <div id="loader">
+      <div class="loader-name" id="loader-name">CARREGANDO PORTFÓLIO...</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loader-bar"></div>
       </div>
-
-      <div class="tape-wrapper">
-        <div class="tape-text">
-          PORTFÓLIO ✦ ADS ✦ FRONT-END ✦ DEVELOPER ✦ SOFTWARE ENGINEER ✦ PORTFÓLIO ✦ FRONT-END ✦ DEVELOPER ✦
-        </div>
-      </div>
-
-      <!-- REDE SOCIAIS -->
-      <div class="social-sidebar">
-        <a href="https://github.com/gcbieu" target="_blank" rel="external" class="social-icon github">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/gcbieu/" target="_blank" rel="external" class="social-icon linkedin">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
-
-      <!-- SCROLL INDICATOR -->
-      <div class="scroll-indicator">
-        <div class="scroll-mouse">
-          <div class="scroll-wheel"></div>
-        </div>
-        <span class="scroll-text" data-text="Role para baixo">Role para baixo</span>
-      </div>
-    </section>
-
-    <!-- SEÇÃO DE ESTRELAS -->
-    <section class="section-dark section-stars">
-      <div id="star-field"></div>
-      <div class="content-wrapper">
-        <div class="code-editor">
-          <div class="code-line indent">
-            <code class="typewriter" data-text="/* CONFIG COSMOS */"></code>
-          </div>
-          <div class="code-line">
-            <code class="typewriter"
-              data-text="<span class='selector'>.cosmos</span> <span class='bracket'>{</span>"></code>
-          </div>
-          <div class="code-line indent">
-            <code class="typewriter"
-              data-text="<span class='key'>status:</span> <span class='value'>exploring</span>;"></code>
-          </div>
-          <div class="code-line indent">
-            <code class="typewriter"
-              data-text="<span class='key'>limits:</span> <span class='value'>none</span>;"></code>
-          </div>
-          <div class="code-line">
-            <code class="typewriter" data-text="<span class='bracket'>}</span>"></code>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO SOBRE MIM -->
-    <section id="about-section">
-      <div class="section-label reveal">SOBRE MIM</div>
-      <div class="about-main-container">
-        <div class="about-content-text reveal">
-          <h2 class="about-hero-title">
-            <span>Sobre</span>
-            <em>Mim</em>
-          </h2>
-          <p class="about-para-lead">
-            Olá, eu sou Gabriel Oliveira. Estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor. Tenho
-            foco em Front-end, criando interfaces modernas, interativas e com forte atenção à experiência do
-            usuário. Busco evoluir para Full Stack, sempre trazendo criatividade e uma visão diferente para cada projeto.
-          </p>
-        </div>
-
-        <div class="about-image-card reveal">
-          <img src="imagens/sobre mim.jpeg" alt="Gabriel Oliveira"
-            onerror="this.src='https://placehold.co/400x500/0f172a/ffffff?text=Gabriel+Oliveira'">
-          <div class="status-badge-floating">
-            <span class="badge-label">Atendendo agora</span>
-            <span class="badge-user">
-              <span class="pulse-dot-green"></span>
-              Gabriel Oliveira · Front-End & UX
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO HABILIDADES -->
-    <section id="about">
-      <div>
-        <div class="section-label reveal">Habilidades </div>
-        <h2 class="about-title reveal">
-          <em>Minhas</em><br>
-          Habilidades
-        </h2>
-
-        <div class="about-stats reveal">
-          <div class="stat-box">
-            <div class="stat-num" data-count="1">0</div>
-            <div class="stat-label">Anos de experiência </div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num" data-count="4">0</div>
-            <div class="stat-label">Projetos Lançados </div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num" data-count="0">0</div>
-            <div class="stat-label">Clientes Satisfeitos </div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-num" data-count="20">0</div>
-            <div class="stat-label">Tecnologias </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="about-right reveal">
-        <div class="skills-group">
-          <div class="skills-group-title">Frontend </div>
-          <div class="skills-tags">
-            <div class="skill-tag"><span>HTML</span></div>
-            <div class="skill-tag"><span>CSS</span></div>
-            <div class="skill-tag"><span>JavaScript</span></div>
-            <div class="skill-tag"><span>Bootstrap</span></div>
-            <div class="skill-tag"><span>Tailwind</span></div>
-            <div class="skill-tag"><span>React</span></div>
-            <div class="skill-tag"><span>Vue.js</span></div>
-          </div>
-        </div>
-        <div class="skills-group">
-          <div class="skills-group-title">Backend & Banco de Dados </div>
-          <div class="skills-tags">
-            <div class="skill-tag"><span>Node.js</span></div>
-            <div class="skill-tag"><span>JWT</span></div>
-            <div class="skill-tag"><span>bcrypt</span></div>
-            <div class="skill-tag"><span>MongoDB</span></div>
-          </div>
-        </div>
-        <div class="skills-group">
-          <div class="skills-group-title">Integração e APIs </div>
-          <div class="skills-tags">
-            <div class="skill-tag"><span>Consumo de APIs REST</span></div>
-            <div class="skill-tag"><span>PDF.co</span></div>
-            <div class="skill-tag"><span>ConvertAPI</span></div>
-            <div class="skill-tag"><span>Formspree</span></div>
-            <div class="skill-tag"><span>BaaS (Supabase)</span></div>
-            <div class="skill-tag"><span>HG Brasil</span></div>
-            <div class="skill-tag"><span>ViaCEP</span></div>
-          </div>
-        </div>
-        <div class="skills-group">
-          <div class="skills-group-title">Ferramentas e Design </div>
-          <div class="skills-tags">
-            <div class="skill-tag"><span>Figma</span></div>
-            <div class="skill-tag"><span>Git</span></div>
-            <div class="skill-tag"><span>GitHub</span></div>
-            <div class="skill-tag"><span>Postman</span></div>
-            <div class="skill-tag"><span>VS Code</span></div>
-            <div class="skill-tag"><span>Excel Avançado</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MARQUEE -->
-    <div class="marquee-wrap">
-      <div class="marquee-track" id="marqueeTrack">
-        <span class="marquee-item">HTML</span><span class="marquee-item marquee-sep">✦</span>
-        <span class="marquee-item">CSS</span><span class="marquee-item marquee-sep">✦</span>
-        <span class="marquee-item">JavaScript</span><span class="marquee-item marquee-sep">✦</span>
-        <span class="marquee-item">React</span><span class="marquee-item marquee-sep">✦</span>
-        <span class="marquee-item">Bootstrap</span><span class="marquee-item marquee-sep">✦</span>
-        <span class="marquee-item">Tailwind</span><span class="marquee-item marquee-sep">✦</span>
-        <span class="marquee-item">Vue.js</span><span class="marquee-item marquee-sep">✦</span>
-        <span class="marquee-item">Node.js</span><span class="marquee-item marquee-sep">✦</span>
-        <span class="marquee-item">MongoDB</span><span class="marquee-item marquee-sep">✦</span>
-        <span class="marquee-item">Git</span><span class="marquee-item marquee-sep">✦</span>
-        <span class="marquee-item">Docker</span><span class="marquee-item marquee-sep">✦</span>
-        <span class="marquee-item">GitHub</span><span class="marquee-item marquee-sep">✦</span>
-        <span class="marquee-item">Figma</span><span class="marquee-item marquee-sep">✦</span>
-      </div>
+      <div class="loader-counter" id="loader-counter">000</div>
     </div>
 
-    <!-- SEÇÃO DE PROJETOS -->
-    <section id="projetos">
-      <div class="section-label reveal">PROJETOS & ESTUDOS </div>
-      <div class="projects-header">
-        <div class="reveal">
-          <div class="projects-title">Meus<br><span
-              style="font-style:italic;color:var(--accent);font-weight:300;">Projetos</span></div>
-        </div>
-        <div class="projects-count reveal">04 Projetos</div>
-      </div>
+    <div class="noise"></div>
+    <div id="cursor"></div>
 
-      <div class="projects-grid-layout">
-        <!-- Card Projeto 1 -->
-        <div class="project-card-item reveal">
-          <div class="project-image-box">
-            <img src="https://images.unsplash.com/photo-1539628390353-20924189ffaa?auto=format&fit=crop&q=80&w=600"
-              alt="AreisPro" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=PROJETO AREIS'">
-          </div>
-          <div class="project-card-details">
-            <h3 class="project-card-name">AREIS PRO</h3>
-            <p class="project-card-description">
-              Sistema corporativo interno com o objetivo de automatizar relatórios em PDF de alta precisão, reduzindo o
-              tempo de operação em cerca de 50%.
-            </p>
-            <div class="project-card-tags">
-              <span class="project-badge-tech">HTML</span>
-              <span class="project-badge-tech">CSS</span>
-              <span class="project-badge-tech">JavaScript</span>
-              <span class="project-badge-tech">Supabase</span>
-              <span class="project-badge-tech">jsPDF</span>
-            </div>
-            <div class="project-actions-links">
-              <a href="https://gcbieu.github.io/projeto-areispro/" target="_blank" class="project-link-action">
-                Deploy
-              </a>
-              <a href="https://github.com/gcbieu/projeto-areispro" target="_blank" class="project-link-action">
-                Código
-              </a>
-            </div>
-          </div>
+    <!-- MENU NAVEGAÇÃO -->
+    <nav class="brutal-nav">
+      <a href="#home" class="nav-logo magnetic">DEV.GO</a>
+
+      <ul class="nav-menu">
+        <li>
+          <a href="#about-section" class="nav-link magnetic" data-text="SOBRE"
+            >SOBRE</a
+          >
+        </li>
+        <li>
+          <a href="#projetos" class="nav-link magnetic" data-text="PROJETOS"
+            >PROJETOS</a
+          >
+        </li>
+        <li>
+          <a href="#contato" class="nav-link magnetic" data-text="CONTATO"
+            >CONTATO</a
+          >
+        </li>
+      </ul>
+      <button class="cta-btn magnetic">
+        <a href="assets/Curriculo_Gabriel_Oliveira_Frontend.pdf" download>
+          <span>Currículo</span>
+        </a>
+      </button>
+    </nav>
+
+    <div id="scroll-content">
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="hero-title-container">
+          <h1>
+            <div class="word hero-name">GABRIEL OLIVEIRA</div>
+            <div class="word hero-role"><span class="role-line">DESENVOLVIMENTO</span><span class="role-line"><span class="hero-amp">&amp;</span> AUTOMAÇÃO</span></div>
+          </h1>
         </div>
 
-        <!-- Card Projeto 2 -->
-        <div class="project-card-item reveal">
-          <div class="project-image-box">
-            <img src="https://images.unsplash.com/photo-1539628390353-20924189ffaa?auto=format&fit=crop&q=80&w=600"
-              alt="Batalha Naval" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=BATALHA NAVAL'">
-          </div>
-          <div class="project-card-details">
-            <h3 class="project-card-name">InovaGames</h3>
-            <p class="project-card-description">
-              Projeto de um jogo interativo de **Batalha Naval** em formato web, desenvolvido como parte das atividades
-              práticas e desafios de programação no SENAC. O projeto exercita a lógica de matrizes, manipulação do
-              DOM e renderização dinâmica baseada no estado de uma aplicação.</p>
-            <div class="project-card-tags">
-              <span class="project-badge-tech">HTML</span>
-              <span class="project-badge-tech">CSS</span>
-              <span class="project-badge-tech">JavaScript</span>
-            </div>
-            <div class="project-actions-links">
-              <a href="https://gcbieu.github.io/BATALHA_NAVAL/" target="_blank" class="project-link-action">
-                Deploy
-              </a>
-              <a href="https://github.com/gcbieu/BATALHA_NAVAL" target="_blank" class="project-link-action">
-                Código
-              </a>
-            </div>
+        <div class="tape-wrapper">
+          <div class="tape-text">
+            SOFTWARE ✦ IA APLICADA ✦ AUTOMAÇÃO ✦ WEB ✦ APIs ✦ BANCO DE DADOS ✦
+            REDES ✦ SOFTWARE ✦ IA APLICADA ✦ AUTOMAÇÃO ✦ WEB ✦ APIs ✦ BANCO DE
+            DADOS ✦ REDES ✦
           </div>
         </div>
 
-        <!-- Card Projeto 3 -->
-        <div class="project-card-item reveal">
-          <div class="project-image-box">
-            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600"
-              alt="SISTEMA CLINICA"
-              onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=SISTEMA+CLINICA'">
-          </div>
-          <div class="project-card-details">
-            <h3 class="project-card-name">SISTEMA CLÍNICA</h3>
-            <p class="project-card-description">
-              Aplicação Single Page focada em agendamento clínico estruturado com autenticação robusta JWT e integrações
-              de geolocalização.
-            </p>
-            <div class="project-card-tags">
-              <span class="project-badge-tech">Vue.js</span>
-              <span class="project-badge-tech">Node.js</span>
-              <span class="project-badge-tech">JWT</span>
-            </div>
-            <div class="project-actions-links">
-              <a href="https://github.com/gcbieu/sistema-clinica" target="_blank" class="project-link-action">
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card Projeto 4 -->
-        <div class="project-card-item reveal">
-          <div class="project-image-box">
-            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=600"
-              alt="InovaWeb" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=InovaWeb'">
-          </div>
-          <div class="project-card-details">
-            <h3 class="project-card-name">InovaWeb</h3>
-            <p class="project-card-description">
-              Plataforma conceitual focada em interatividades imersivas e transições complexas utilizando Vanilla JS e
-              CSS de alto nível.
-            </p>
-            <div class="project-card-tags">
-              <span class="project-badge-tech">HTML5</span>
-              <span class="project-badge-tech">CSS3</span>
-              <span class="project-badge-tech">JavaScript</span>
-            </div>
-            <div class="project-actions-links">
-              <a href="https://github.com/gcbieu/VNEW" target="_blank" class="project-link-action">
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO GITHUB -->
-    <section id="github-section">
-      <div class="github-inner">
-        <div class="reveal">
-          <div class="section-label" style="color:rgba(255,255,255,0.4);">Código Aberto </div>
-          <h2 class="github-title">Construindo <br>em <em>Público.</em> </h2>
-          <p class="github-desc">Cada commit conta uma história. Todo repositório é uma conversa. Acredito em construir
-            em público e contribuir para o ecossistema que me formou. </p>
-          <a href="https://github.com/gcbieu" target="_blank" class="github-btn">
-            View GitHub Profile
+        <!-- REDE SOCIAIS -->
+        <div class="social-sidebar">
+          <a
+            href="https://github.com/gcbieu"
+            target="_blank"
+            rel="external"
+            class="social-icon github"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/gcbieu/"
+            target="_blank"
+            rel="external"
+            class="social-icon linkedin"
+          >
+            <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
 
-        <div class="reveal">
-          <div id="github-stats">
-            <div class="gh-stat">
-              <div class="gh-num" id="ghRepos">— </div>
-              <div class="gh-label">Repositórios </div>
-            </div>
-            <div class="gh-stat">
-              <div class="gh-num" id="ghStars">— </div>
-              <div class="gh-label">Stars </div>
-            </div>
-            <div class="gh-stat">
-              <div class="gh-num" id="ghFollowers">— </div>
-              <div class="gh-label">Seguidores </div>
-            </div>
-            <div class="gh-stat">
-              <div class="gh-num">100+</div>
-              <div class="gh-label">Contributions </div>
-            </div>
+        <!-- SCROLL INDICATOR -->
+        <div class="scroll-indicator">
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
           </div>
+          <span class="scroll-text" data-text="Role para baixo"
+            >Role para baixo</span
+          >
+        </div>
+      </section>
 
-          <div class="contribution-grid" id="contribGrid">
-            <div class="contrib-title">Contribution Activity — 2026 </div>
+      <!-- SEÇÃO DE ESTRELAS -->
+      <section class="section-dark section-stars">
+        <div id="star-field"></div>
+        <div class="content-wrapper">
+          <div class="code-editor">
+            <div class="code-line indent">
+              <code class="typewriter" data-text="/* CONFIG COSMOS */"></code>
+            </div>
+            <div class="code-line">
+              <code
+                class="typewriter"
+                data-text="<span class='selector'>.cosmos</span> <span class='bracket'>{</span>"
+              ></code>
+            </div>
+            <div class="code-line indent">
+              <code
+                class="typewriter"
+                data-text="<span class='key'>status:</span> <span class='value'>exploring</span>;"
+              ></code>
+            </div>
+            <div class="code-line indent">
+              <code
+                class="typewriter"
+                data-text="<span class='key'>limits:</span> <span class='value'>none</span>;"
+              ></code>
+            </div>
+            <div class="code-line">
+              <code
+                class="typewriter"
+                data-text="<span class='bracket'>}</span>"
+              ></code>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTATO -->
-    <section id="contato">
-      <div class="contact-inner">
+      <!-- SEÇÃO SOBRE MIM -->
+      <section id="about-section">
+        <div class="section-label reveal">SOBRE MIM</div>
+        <div class="about-main-container">
+          <div class="about-content-text reveal">
+            <h2 class="about-hero-title">
+              <span>Sobre</span>
+              <em>Mim</em>
+            </h2>
+            <p class="about-para-lead">
+              Sou estudante de Análise e Desenvolvimento de Sistemas, e Técnico
+              em Redes de Computadores. Desenvolvo aplicações web, integrações e
+              soluções de automação, com experiência em aplicar inteligência
+              artificial a problemas operacionais reais. Minha trajetória também
+              inclui gestão de equipes, processos e infraestrutura.
+            </p>
+          </div>
+
+          <div class="about-image-card reveal">
+            <img
+              src="imagens/sobre mim.jpeg"
+              alt="Gabriel Oliveira"
+              onerror="
+                this.src =
+                  'https://placehold.co/400x500/0f172a/ffffff?text=Gabriel+Oliveira'
+              "
+            />
+            <div class="status-badge-floating">
+              <span class="badge-label">Atendendo agora</span>
+              <span class="badge-user">
+                <span class="pulse-dot-green"></span>
+                Gabriel Oliveira · Software · IA · Redes
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO HABILIDADES -->
+      <section id="about">
         <div>
-          <div class="section-label reveal">Entre em contato </div>
-          <div class="contact-big reveal">
-            Vamos<br>
-            <em>construir</em><br>
-            juntos.
-          </div>
-          <p class="contact-sub reveal">Seja com um projeto em mente, colaborando ou apenas querendo dar um oi! </p>
-          <div class="contact-links reveal">
-            <a href="https://github.com/gcbieu" target="_blank" class="contact-link">
-              <div>
-                <div class="contact-link-name">GitHub</div>
-                <div class="contact-link-handle">github.com/gcbieu</div>
-              </div>
-            </a>
-            <a href="https://linkedin.com/in/gcbieu" target="_blank" class="contact-link">
-              <div>
-                <div class="contact-link-name">LinkedIn</div>
-                <div class="contact-link-handle">linkedin.com/in/gcbieu</div>
-              </div>
-            </a>
+          <div class="section-label reveal">Habilidades</div>
+          <h2 class="about-title reveal">
+            <em>Minhas</em><br />
+            Habilidades
+          </h2>
+
+          <div class="about-stats reveal">
+            <div class="stat-box">
+              <div class="stat-num" data-count="4">0</div>
+              <div class="stat-label">Período em ADS</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" data-count="5">0</div>
+              <div class="stat-label">Projetos Lançados</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" data-count="2027">0</div>
+              <div class="stat-label">Previsão de conclusão ADS</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" data-count="20+">0</div>
+              <div class="stat-label">Tecnologias</div>
+            </div>
           </div>
         </div>
 
-        <div class="contact-form-wrap reveal">
-          <div class="section-label">Envie uma Mensagem </div>
-          <form id="my-form" action="https://formspree.io/f/mdapogno" method="POST">
-            <div class="form-row">
-              <label class="form-label">Seu Nome</label>
-              <input type="text" name="name" class="form-input" placeholder="Digite seu nome..." required />
+        <div class="about-right reveal">
+          <div class="skills-group">
+            <div class="skills-group-title">Desenvolvimento web</div>
+            <div class="skills-tags">
+              <div class="skill-tag"><span>HTML</span></div>
+              <div class="skill-tag"><span>CSS</span></div>
+              <div class="skill-tag"><span>JavaScript</span></div>
+              <div class="skill-tag"><span>TypeScript (fundamentos)</span></div>
+              <div class="skill-tag"><span>React</span></div>
+              <div class="skill-tag"><span>Vue.js</span></div>
+              <div class="skill-tag"><span>Node.js (fundamentos)</span></div>
             </div>
-            <div class="form-row">
-              <label class="form-label">Endereço de E-mail</label>
-              <input type="email" name="email" class="form-input" placeholder="exemplo@email.com" required />
+          </div>
+          <div class="skills-group">
+            <div class="skills-group-title">Banco de dados e backend</div>
+            <div class="skills-tags">
+              <div class="skill-tag"><span>SQL</span></div>
+              <div class="skill-tag"><span>MySQL</span></div>
+              <div class="skill-tag"><span>SQL Server</span></div>
+              <div class="skill-tag"><span>Supabase</span></div>
+              <div class="skill-tag"><span>APIs REST</span></div>
+              <div class="skill-tag"><span>Autenticação e JWT</span></div>
             </div>
-            <div class="form-row">
-              <label class="form-label">Mensagem</label>
-              <textarea name="message" class="form-textarea" placeholder="Digite sua mensagem..." required></textarea>
+          </div>
+          <div class="skills-group">
+            <div class="skills-group-title">IA aplicada e automação</div>
+            <div class="skills-tags">
+              <div class="skill-tag">
+                <span>Uso de IA no desenvolvimento</span>
+              </div>
+              <div class="skill-tag"><span>Automação de relatórios</span></div>
+              <div class="skill-tag"><span>ChatGPT / Codex</span></div>
+              <div class="skill-tag">
+                <span>Integração de ferramentas</span>
+              </div>
+              <div class="skill-tag">
+                <span>PDFs e fluxos operacionais</span>
+              </div>
             </div>
-            <button type="submit" class="form-submit">
-              <span>Enviar Mensagem →</span>
-            </button>
-            <p id="form-status"></p>
-          </form>
+          </div>
+          <div class="skills-group">
+            <div class="skills-group-title">Infraestrutura e ferramentas</div>
+            <div class="skills-tags">
+              <div class="skill-tag">
+                <span>Redes de computadores (em formação)</span>
+              </div>
+              <div class="skill-tag"><span>Git / GitHub</span></div>
+              <div class="skill-tag"><span>Docker</span></div>
+              <div class="skill-tag"><span>Linux</span></div>
+              <div class="skill-tag"><span>VS Code</span></div>
+              <div class="skill-tag"><span>Postman</span></div>
+              <div class="skill-tag"><span>Excel avançado</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE -->
+      <div class="marquee-wrap">
+        <div class="marquee-track" id="marqueeTrack">
+          <span class="marquee-item">HTML</span
+          ><span class="marquee-item marquee-sep">✦</span
+          ><span class="marquee-item">CSS</span
+          ><span class="marquee-item marquee-sep">✦</span
+          ><span class="marquee-item">JavaScript</span
+          ><span class="marquee-item marquee-sep">✦</span
+          ><span class="marquee-item">TypeScript</span
+          ><span class="marquee-item marquee-sep">✦</span
+          ><span class="marquee-item">React</span
+          ><span class="marquee-item marquee-sep">✦</span
+          ><span class="marquee-item">Supabase</span
+          ><span class="marquee-item marquee-sep">✦</span
+          ><span class="marquee-item">SQL</span
+          ><span class="marquee-item marquee-sep">✦</span
+          ><span class="marquee-item">REST APIs</span
+          ><span class="marquee-item marquee-sep">✦</span
+          ><span class="marquee-item">Docker</span
+          ><span class="marquee-item marquee-sep">✦</span
+          ><span class="marquee-item">GitHub</span
+          ><span class="marquee-item marquee-sep">✦</span
+          ><span class="marquee-item">IA aplicada</span
+          ><span class="marquee-item marquee-sep">✦</span
+          ><span class="marquee-item">Redes</span
+          ><span class="marquee-item marquee-sep">✦</span>
         </div>
       </div>
-    </section>
 
-    <footer
-      style="padding: 3rem 0; background: #080808; border-top: 1px solid var(--border-color); text-align: center;">
-      <p style="font-size: 11px; opacity: 0.3; text-transform: uppercase; letter-spacing: 0.5em;">© 2026 Gabriel
-        Oliveira • Crafted with Passion.</p>
-    </footer>
-  </div>
+      <!-- SEÇÃO DE PROJETOS -->
+      <section id="projetos">
+        <div class="section-label reveal">PROJETOS &amp; ESTUDOS</div>
+        <div class="projects-header">
+          <div class="reveal">
+            <div class="projects-title">
+              Meus<br /><span
+                style="
+                  font-style: italic;
+                  color: var(--accent);
+                  font-weight: 300;
+                "
+                >Projetos</span
+              >
+            </div>
+          </div>
+          <div class="projects-count reveal">05 Projetos e cases</div>
+        </div>
+        <div class="projects-grid-layout">
+          <!-- Card Projeto 1 -->
+          <div class="project-card-item reveal">
+            <div class="project-image-box">
+              <img alt="AreisPro" src="imagens/capa_areispro.png" loading="lazy" />
+            </div>
+            <div class="project-card-details">
+              <h3 class="project-card-name">AREIS PRO</h3>
+              <p class="project-card-description">
+                Ferramenta de automação de relatórios técnicos com fotos de
+                antes e depois, capa e anexos em PDF. Desenvolvida com auxílio
+                de IA no planejamento, na implementação e nos ajustes do fluxo.
+                Aplicada a uma rotina real de manutenção, agilizando a produção
+                de relatórios e reduzindo etapas manuais.
+              </p>
+              <div class="project-card-tags">
+                <span class="project-badge-tech">HTML</span>
+                <span class="project-badge-tech">CSS</span>
+                <span class="project-badge-tech">JavaScript</span>
+                <span class="project-badge-tech">Supabase</span>
+                <span class="project-badge-tech">jsPDF</span>
+              </div>
+              <div class="project-actions-links">
+                <a
+                  class="project-link-action"
+                  href="https://gcbieu.github.io/projeto-areispro/"
+                  target="_blank"
+                >
+                  Deploy
+                </a>
+                <a
+                  class="project-link-action"
+                  href="https://github.com/gcbieu/projeto-areispro"
+                  target="_blank"
+                >
+                  Código
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Card Projeto 2 -->
+          <div class="project-card-item reveal">
+            <div class="project-image-box">
+              <img src="imagens/capa_batalha_naval.svg" alt="Ilustração do jogo Batalha Naval com tabuleiro 5 por 5" loading="lazy" />
+            </div>
+            <div class="project-card-details">
+              <h3 class="project-card-name">BATALHA NAVAL</h3>
+              <p class="project-card-description">
+                Jogo de Batalha Naval desenvolvido no SENAC com JavaScript, HTML
+                e CSS. Tabuleiro 5×5, três navios ocultos e limite de dez
+                tentativas. Exercício de lógica com matrizes, manipulação do DOM
+                e atualização do estado da partida.
+              </p>
+              <div class="project-card-tags">
+                <span class="project-badge-tech">HTML</span>
+                <span class="project-badge-tech">CSS</span>
+                <span class="project-badge-tech">JavaScript</span>
+              </div>
+              <div class="project-actions-links">
+                <a
+                  class="project-link-action"
+                  href="https://gcbieu.github.io/BATALHA_NAVAL/"
+                  target="_blank"
+                >
+                  Deploy
+                </a>
+                <a
+                  class="project-link-action"
+                  href="https://github.com/gcbieu/BATALHA_NAVAL"
+                  target="_blank"
+                >
+                  Código
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Card Projeto 3 -->
+          <div class="project-card-item reveal">
+            <div class="project-image-box">
+              <img
+                alt="SISTEMA CLINICA"
+                src="imagens/Capa Sistema-Clinica.png" loading="lazy"
+              />
+            </div>
+            <div class="project-card-details">
+              <h3 class="project-card-name">SISTEMA CLÍNICA</h3>
+              <p class="project-card-description">
+                Projeto de aplicação para organização de agendamentos clínicos,
+                com interface em Vue.js e estudo de autenticação via JWT e
+                integração entre front-end e back-end.
+              </p>
+              <div class="project-card-tags">
+                <span class="project-badge-tech">Vue.js</span>
+                <span class="project-badge-tech">Node.js</span>
+                <span class="project-badge-tech">JWT</span>
+              </div>
+              <div class="project-actions-links">
+                <a
+                  class="project-link-action"
+                  href="https://github.com/gcbieu/sistema-clinica"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="script.js"></script>
-</body>
+          <!-- Card Projeto 4 -->
+          <div class="project-card-item reveal">
+            <div class="project-image-box">
+              <img alt="Capa do projeto Inovaweb" src="imagens/capa_inovaweb.png" loading="lazy" />
+            </div>
+            <div class="project-card-details">
+              <h3 class="project-card-name">Inovaweb</h3>
+              <p class="project-card-description">Landing page institucional demonstrativa voltada a inovação e inteligência artificial. Apresenta serviços de automação com IA, desenvolvimento web e consultoria digital, além de uma seção de cursos e canais de contato. Projeto de front-end com foco na organização do conteúdo, identidade visual e navegação por seções.</p>
+              <div class="project-card-tags">
+                <span class="project-badge-tech">HTML5</span>
+                <span class="project-badge-tech">CSS3</span>
+                <span class="project-badge-tech">JavaScript</span>
+              </div>
+              <div class="project-actions-links">
+                <a class="project-link-action" href="https://gcbieu.github.io/InovaWeb/" target="_blank">
+                  Deploy
+                </a>
+                <a
+                  class="project-link-action"
+                  href="https://github.com/gcbieu/InovaWeb"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card-item reveal project-coming-soon">
+            <div class="project-image-box">
+              <img src="imagens/capa_salt_be.svg" alt="Arte de apresentação do case comercial SALT BE BIKINI" loading="lazy" />
+            </div>
+            <div class="project-card-details">
+              <h3 class="project-card-name">SALT BE BIKINI</h3>
+              <p class="project-card-description">
+                MVP de catálogo e pedidos por WhatsApp para moda praia no
+                atacado. Trabalho com catálogo de produtos, sacola, regras de
+                pedido, administração e infraestrutura usando Supabase e
+                Cloudflare Workers. Projeto comercial ainda sem repositório
+                público.
+              </p>
+              <div class="project-card-tags">
+                <span class="project-badge-tech">Supabase</span
+                ><span class="project-badge-tech">Cloudflare Workers</span
+                ><span class="project-badge-tech">API</span
+                ><span class="project-badge-tech">Auth</span>
+              </div>
+              <div class="project-actions-links">
+                <span class="project-link-action project-link-disabled"
+                  >Case em preparação</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- SEÇÃO GITHUB -->
+      <section id="github-section">
+        <div class="github-inner">
+          <div class="reveal">
+            <div class="section-label" style="color: rgba(255, 255, 255, 0.4)">
+              Código Aberto
+            </div>
+            <h2 class="github-title">Construindo <br />em <em>Público.</em></h2>
+            <p class="github-desc">
+              Cada commit conta uma história. Todo repositório é uma conversa.
+              Acredito em construir em público e contribuir para o ecossistema
+              que me formou.
+            </p>
+            <a
+              href="https://github.com/gcbieu"
+              target="_blank"
+              class="github-btn"
+            >
+              View GitHub Profile
+            </a>
+          </div>
+
+          <div class="reveal">
+            <div id="github-stats">
+              <div class="gh-stat">
+                <div class="gh-num" id="ghRepos">—</div>
+                <div class="gh-label">Repositórios</div>
+              </div>
+              <div class="gh-stat">
+                <div class="gh-num" id="ghStars">—</div>
+                <div class="gh-label">Stars</div>
+              </div>
+              <div class="gh-stat">
+                <div class="gh-num" id="ghFollowers">—</div>
+                <div class="gh-label">Seguidores</div>
+              </div>
+              <div class="gh-stat">
+                <div class="gh-num">100+</div>
+                <div class="gh-label">Contributions</div>
+              </div>
+            </div>
+
+            <div class="contribution-grid" id="contribGrid">
+              <div class="contrib-title">Contribution Activity — 2026</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section id="contato">
+        <div class="contact-inner">
+          <div>
+            <div class="section-label reveal">Entre em contato</div>
+            <div class="contact-big reveal">
+              Vamos<br />
+              <em>construir</em><br />
+              juntos.
+            </div>
+            <p class="contact-sub reveal">
+              Seja com um projeto em mente, colaborando ou apenas querendo dar
+              um oi!
+            </p>
+            <div class="contact-links reveal">
+              <a
+                href="https://github.com/gcbieu"
+                target="_blank"
+                class="contact-link"
+              >
+                <div>
+                  <div class="contact-link-name">GitHub</div>
+                  <div class="contact-link-handle">github.com/gcbieu</div>
+                </div>
+              </a>
+              <a
+                href="https://linkedin.com/in/gcbieu"
+                target="_blank"
+                class="contact-link"
+              >
+                <div>
+                  <div class="contact-link-name">LinkedIn</div>
+                  <div class="contact-link-handle">linkedin.com/in/gcbieu</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap reveal">
+            <div class="section-label">Envie uma Mensagem</div>
+            <form
+              id="my-form"
+              action="https://formspree.io/f/mdapogno"
+              method="POST"
+            >
+              <div class="form-row">
+                <label class="form-label">Seu Nome</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-input"
+                  placeholder="Digite seu nome..."
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label class="form-label">Endereço de E-mail</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="exemplo@email.com"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <label class="form-label">Mensagem</label>
+                <textarea
+                  name="message"
+                  class="form-textarea"
+                  placeholder="Digite sua mensagem..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="form-submit">
+                <span>Enviar Mensagem →</span>
+              </button>
+              <p id="form-status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        style="
+          padding: 3rem 0;
+          background: #080808;
+          border-top: 1px solid var(--border-color);
+          text-align: center;
+        "
+      >
+        <p
+          style="
+            font-size: 11px;
+            opacity: 0.3;
+            text-transform: uppercase;
+            letter-spacing: 0.5em;
+          "
+        >
+          © 2026 Gabriel Oliveira • Crafted with Passion.
+        </p>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

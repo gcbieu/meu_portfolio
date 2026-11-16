@@ -1766,3 +1766,60 @@ body {
         }
 
     }
+
+/* Correção pontual da capa: hierarquia e responsividade (16/11/2026) */
+.hero-title-container {
+    width: min(1120px, calc(100% - 72px));
+    max-width: 1120px;
+    perspective: 1000px;
+    white-space: normal;
+    padding: 0 1rem;
+}
+.hero h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(18px, 3.5vh, 42px);
+    font-size: inherit;
+    line-height: 1.2;
+    mix-blend-mode: normal;
+    transform: none;
+    margin: 0;
+}
+.hero h1 .word {
+    display: block;
+    white-space: normal;
+    max-width: 100%;
+    line-height: 1.2;
+}
+.hero h1 .hero-name {
+    font-size: clamp(1.7rem, 4.3vw, 3.9rem);
+    letter-spacing: -.045em;
+}
+.hero h1 .hero-role {
+    font-size: clamp(1.25rem, 2.85vw, 2.65rem);
+    letter-spacing: -.045em;
+    text-wrap: balance;
+}
+.hero h1 .hero-amp { color: var(--accent); }
+.hero h1 .hero-role .char { vertical-align: baseline; }
+.hero .social-sidebar { right: clamp(12px, 2vw, 32px); }
+.project-image-box { background: #121519; border: 1px solid rgba(255,255,255,.08); }
+.project-image-box img { display: block; object-fit: cover; filter: none; }
+.project-card-item:hover .project-image-box img { filter: none; transform: scale(1.025); }
+@media (max-width: 768px) {
+  .hero-title-container { width: calc(100% - 26px) !important; padding: 0 6px; }
+  .hero h1 { gap: 26px; }
+  .hero h1 .hero-name { font-size: clamp(1.4rem, 5.5vw, 2.2rem); }
+  .hero h1 .hero-role { font-size: clamp(1.1rem, 4.5vw, 1.9rem); }
+  .hero .social-sidebar { right: 8px; }
+}
+@media (max-width: 420px) {
+  .hero h1 .hero-name { font-size: 1.25rem; }
+  .hero h1 .hero-role { font-size: 1rem; }
+}
+
+/* Título com duas linhas estáveis, sem ultrapassar a largura da tela. */
+.hero h1 .hero-role { display:flex; flex-direction:column; align-items:center; gap:.25em; }
+.hero h1 .hero-role .role-line { display:block; white-space:nowrap; }
+@media (max-width:768px){ .hero h1 .hero-role { gap:.4em; } }
